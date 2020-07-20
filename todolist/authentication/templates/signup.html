@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+signup page
+{% endblock %}
+
+{% block body %}
+<h4>
+  {{error}}  
+</h4>
+
+<h3>Signup page</h3>
+<form class="myform" action="{% url 'usersignup' %}" method="post">
+    {% csrf_token %}
+     {{form.as_p}} 
+     <button class="btn #388e3c green darken-2" type="submit">submit</button>
+</form>
+    
+
+
+{% endblock %}
+

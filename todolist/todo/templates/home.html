@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Home page
+{% endblock %}
+
+{% block body %}
+<h3>hello {{user.username}}</h3>
+<div class="myform">
+  <form  action="{% url 'home' %}" method="post">
+    {% csrf_token %}
+    {{form}}
+ <button class="btn #388e3c green darken-2" type="submit">create</button>
+</form>
+
+<ul class="collection">
+    {% for todo in todos %}
+         <li class="collection-item">
+             {{todo.title}}
+             <a href="{% url 'delete' todo.id  %}"><i class="material-icons">delete</i></a>
+        </li>
+    {% endfor %}
+    
+  </ul>
+          
+</div>
+
+
+{% endblock %}
+

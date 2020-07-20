@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home page
+{% endblock %}
+
+{% block body %}
+<div class="center-align">
+   <h2>{{blog.title}}</h2>
+   <h6>{{blog.date|date:'d F Y'}}</h6>
+   <img style="width: 80vw; margin: 0px auto;" src="{{blog.image.url}}" />
+   <h5>{{blog.description}}</h5>  
+</div>
+
+   
+{% endblock %}

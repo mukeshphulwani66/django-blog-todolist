@@ -1,0 +1,24 @@
+.material-icons{
+    float: right;
+}
+h3{
+    text-align: center;
+    color: #388e3c;
+}
+
+.myform{
+    max-width: 500px;
+    margin: 10px auto;
+}
+h4{
+    color:#e53935;
+    text-align: center;
+}
+
+.myform ul{
+    display: none;
+}
+
+.collection{
+    display: block !important;
+}
